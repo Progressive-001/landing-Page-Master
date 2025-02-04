@@ -550,15 +550,20 @@ a:hover .icon {
 
 .logo-2 {
   position: relative;
-  left: 0px;
   bottom: 68px;
   left: -75px;
   transform: translate(50%, 50%);
   width: 150px;
   height: 25px;
   background: white;
-  -webkit-mask: url("/manage-landing-page-master/images/logo.svg") no-repeat center/contain;
-          mask: url("/manage-landing-page-master/images/logo.svg") no-repeat center/contain;
+  -webkit-mask: url("/manage-landing-page-master/images/logo.svg");
+  mask: url("/manage-landing-page-master/images/logo.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
   -webkit-clip-path: inset(0 0 0 12%);
           clip-path: inset(0 0 0 12%);
 }
@@ -758,12 +763,6 @@ a:hover .icon {
   }
   .social-icons img {
     height: 30px;
-  }
-  .logo-2 {
-    position: relative;
-    top: 23px;
-    left: -75px;
-    transform: translate(50%, 50%);
   }
   .input-field {
     margin-top: 25px;
