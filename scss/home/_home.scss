@@ -390,23 +390,48 @@ a:hover .icon {
   filter: invert(0%) brightness(1.0) contrast(8%) sepia(1) hue-rotate(-30deg) saturate(5);
 }
 
-.logo{
+// .logo{
+//   width: 150px;
+//   height: 25px;
+// }
+
+// .logo-2 {
+//   position: relative;
+//   left: 0px;
+//   bottom: 68px;
+//   left: -75px;
+//   transform: translate(50%, 50%);
+//   width: 150px;
+//   height: 25px;
+//   background: white;
+//   mask: url('/manage-landing-page-master/images/logo.svg') no-repeat center / contain;
+//   clip-path: inset(0 0 0 12%);
+// }
+
+.logo {
   width: 150px;
   height: 25px;
 }
 
 .logo-2 {
   position: relative;
-  left: 0px;
   bottom: 68px;
   left: -75px;
   transform: translate(50%, 50%);
   width: 150px;
   height: 25px;
   background: white;
-  mask: url('/manage-landing-page-master/images/logo.svg') no-repeat center / contain;
+  -webkit-mask: url('/manage-landing-page-master/images/logo.svg');
+  mask: url('/manage-landing-page-master/images/logo.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
   clip-path: inset(0 0 0 12%);
 }
+
 
 .attribution{
   @include flex(row, center, center);
