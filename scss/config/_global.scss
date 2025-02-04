@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+html{
+  font-size: 62.5%;//1rem = 10px This now covert 1rem to 10px
+}
+
+body{ 
+  font-size: 1.6rem;
+  height: 100vh;
+ 
+}
+
+.container{
+  @include flex(column, center, center);
+  gap: 50px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  
+
+
+}
+
+
+p{
+  color: $paragraph-color;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.3rem;
+}
+
+a{
+  text-decoration: none;
+}
+
+h1{
+  font-size: 4rem;
+  color: $heading-color;
+}
+
+h2{
+  font-size: 3.5rem;
+  color: $heading-color;
+}
+
+h3{
+  font-size: 1.5rem;
+  color: $heading-color;
+}

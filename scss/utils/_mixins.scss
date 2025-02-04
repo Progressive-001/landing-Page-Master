@@ -1,0 +1,163 @@
+@mixin flex($flex-prop, $align-prop, $justify-prop){
+  display: flex;
+  flex-direction: $flex-prop;
+  align-items: $align-prop;
+  justify-content: $justify-prop;
+}
+
+@mixin image-1(){
+  background-image: url(/manage-landing-page-master/images/bg-tablet-pattern.svg);
+  width: 600px;
+  height: 600px;
+  bottom: 630px;
+  left: -320px;
+
+}
+
+@mixin image-2(){
+  background-image: url(/manage-landing-page-master/images/bg-tablet-pattern.svg);
+  width: 500px;
+  height: 500px;
+  top: -140px;
+  right: -40px;
+
+}
+
+@mixin image-1-mobile(){
+  background-image: url(/manage-landing-page-master/images/bg-tablet-pattern.svg);
+  background-size: 380px;
+  top: 520px;
+  left: 200px;
+
+}
+
+@mixin image-2-mobile(){
+  background-image: url(/manage-landing-page-master/images/bg-tablet-pattern.svg);
+  width: 500px;
+  height: 500px;
+  top: -95px;
+  right: -90px;
+
+}
+
+@mixin image-3(){
+  background-image: url(/manage-landing-page-master/images/bg-tablet-pattern.svg);
+  width: 500px;
+  height: 500px;
+  bottom: -230px;
+  left: 100px;
+}
+
+@mixin image-3-mobile(){
+  background-image: url(/manage-landing-page-master/images/bg-tablet-pattern.svg);
+  background-size: 450px;
+  bottom: -200px;
+  left: -350px;
+}
+
+
+@mixin image-4(){
+  background-image: url(/manage-landing-page-master/images/bg-tablet-pattern.svg);
+  width: 500px;
+  height: 500px;
+  top: -350px;
+  right: -350px;
+}
+
+
+@mixin circle-nav(){
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  border: 1.5px solid $banner-color-1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+// @mixin circle-nav-1(){
+//   border-radius: 50%;
+//   height: 10px;
+//   width: 10px;
+//   border: 1.5px solid $banner-color-1;
+//   background-color: $banner-color-1;
+// }
+
+
+@mixin button-1($border-color){
+  border-radius: 25px;
+  background-color: $border-color;
+  border: 0px none;
+  height: 45px;
+  width:  130px;
+  color: $ButtonText-color-1;
+  text-align: center;
+  font-weight: 600;
+}
+
+@mixin button-2($border-color){
+  border-radius: 25px;
+  background-color: $border-color;
+  border: 0px none;
+  height: 45px;
+  width:  130px;
+  color: $ButtonText-color-2;
+  text-align: center;
+  font-weight: 600;
+}
+
+@mixin button-3($border-color){
+  border-radius: 30px;
+  background-color: $border-color;
+  border: 0px none;
+  height: 45px;
+  width:  70px;
+  color: $ButtonText-color-1;
+  text-align: center;
+  font-weight: 600;
+  outline: 0px;
+}
+
+@mixin input-prop(){
+  border-radius: 30px;
+  border: 0px;
+  outline: none;
+  height: 45px;
+  width:  230px;
+  text-align: left;
+  padding-left: 10px;
+  font-weight: 400;
+}
+
+@mixin box-num($border-color){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: $border-color;
+  border: 0px none;
+  height: 40px;
+  width:  65px;
+  color: $ButtonText-color-1;
+}
+
+
+@mixin mobile-only-1(){
+  @media (max-width: 768px){
+    @content;
+  }
+}
+
+@mixin mobile-only-2(){
+  @media (max-width: 399px){
+    @content;
+  }
+}
+
+
+@mixin mobile-selector($selector){
+  @media (max-width: 768px){
+    #{$selector}{
+      @content;
+    }   
+  }
+}
